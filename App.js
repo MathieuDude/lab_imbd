@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, ActivityIndicator, FlatList, Button } from 'react-native';
 import SearchForm from './components/SearchForm';
-import Header from './components/Header'
-import FilmItem from './components/FilmItem'
+import Header from './components/Header';
+import FilmItem from './components/FilmItem';
+import InputBar from './components/InputBar';
 
 
 export default function App() {
