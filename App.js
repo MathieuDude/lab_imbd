@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, FlatList, Button } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, FlatList, Button, TextInput, CheckBox, DatePickerAndroid } from 'react-native';
 import SearchForm from './components/SearchForm';
 import Header from './components/Header';
 import FilmItem from './components/FilmItem';
 import InputBar from './components/InputBar';
-
+import Select from 'react-select';
 
 export default function App() {
     // const fetchUrl = 'https://movies-420kcg-lg.herokuapp.com';
@@ -14,12 +14,82 @@ export default function App() {
 
     return (
         <View style={styles.mainContainer}>
-            <Header title="(not) IMBD" />
-            <InputBar
-                //txtInput={this.state.txtInput}
-                //onChangeText={txtInput => this.setState({ txtInput })}
-                //action={() => this.addNewEntries()}
-            />
+            <Header title="(not) IMBD"/>
+            <View style={styles.content}>
+                <View style={styles.flexContainer}>
+                    <Text style={{ fontSize: 28, paddingLeft: 10 }}>Advanced Search</Text>
+                    <Button
+                        title="Back to results"
+                        onPress={() => null}
+                        style={styles.button}
+                    />
+                </View>
+                {//title input bar
+                }
+                <TextInput
+                    style={styles.inputBar}
+                    placeholder="Title"
+                    //onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                    //value={props.txtInput}
+                />
+                {//Starring input bar 
+                }
+                <TextInput
+                    style={styles.inputBar}
+                    placeholder="Starring"
+                    //onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                    //value={props.txtInput}
+                />
+                {//Director input bar 
+                }
+                <TextInput
+                    style={styles.inputBar}
+                    placeholder="Director"
+                    //onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                    //value={props.txtInput}
+                />
+                {//Genre
+                }
+                <View style={styles.flexContainer}>
+                    <Text style={{ fontSize: 22, paddingLeft: 10 }}>Genre:</Text>
+                </View>
+                {//BASED ON BOOK?
+                }
+                <View style={styles.flexContainer}>
+                    <Text style={{ fontSize: 22, paddingLeft: 10 }}>Based on a book:</Text>
+                    <CheckBox></CheckBox>
+                </View>
+                {//RELEASE DATE PROBABLY NEEDS TO BE A DATE PICKER
+                }
+                <TextInput
+                    style={styles.inputBar}
+                    placeholder="Release Date"
+                    //onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                    //value={props.txtInput}
+                />
+                {//MOVIE DURATION
+                }
+                <TextInput
+                    style={styles.inputBar}
+                    placeholder="Duration"
+                    //onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                    //value={props.txtInput}
+                />
+                {//RESET AND CONFIRM BUTTONS
+                }
+                <View style={styles.flexContainer}>
+                    <Button
+                        title="RESET"
+                        onPress={() => null}
+                        style={styles.button}
+                    />
+                    <Button
+                        title="CONFIRM"
+                        onPress={() => null}
+                        style={styles.button}
+                    />
+                </View>
+            </View>
         </View>
     );
 
@@ -36,6 +106,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     button: {
-        width: '45%'
+        width: '45%',
+        paddingRight: 400,
+        color: "#f5e942", //This ain't workin yet for some reason
+        margin: 10,
     },
+    inputBar: {
+        backgroundColor: '#DFDFDF',
+        fontSize: 18,
+        height: 45,
+        padding: 10,
+        marginVertical: 5,
+    },
+    mainContainer: {
+        
+
+    },
+    content: {
+        padding:10,
+
+    },
+
 });
