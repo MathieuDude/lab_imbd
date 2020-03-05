@@ -1,8 +1,8 @@
 import React from 'react'
-import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
 const InputBar = (props) => {
-    return(
+    return (
         <View style={styles.inputContainer}>
 
             {
@@ -15,12 +15,12 @@ const InputBar = (props) => {
                 */
             }
             <TextInput
-            style={styles.input}
-            placeholder = "Type here to add entries!"
-            onChangeText={(txtInput) => props.onChangeText(txtInput)}
-            value={props.txtInput}
+                style={styles.input}
+                placeholder="Type here to add entries!"
+                onChangeText={(txtInput) => props.onChangeText(txtInput)}
+                value={props.txtInput}
             />
-            
+
             {
                 // -- TOUCHABLE OPACITY
                 /*
@@ -28,9 +28,9 @@ const InputBar = (props) => {
                     onPress -> Action qui est déclenché quand on touche "TouchableOpacity" 
                 */
             }
-            
-            <TouchableOpacity style={styles.homeMadeButton} 
-            onPress={props.action}>
+
+            <TouchableOpacity style={styles.homeMadeButton}
+                onPress={props.action}>
                 <Text style={styles.buttonText}>ADD</Text>
             </TouchableOpacity>
 
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     buttonText: {
         textAlign: 'center',
         color: 'white'
-      }
+    }
 
 });
 
