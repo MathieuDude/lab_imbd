@@ -2,7 +2,13 @@ import React from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 
 const FilmItem = (props) => {
-    
+    return(
+        <View style={styles.todoItem}>
+            <Text></Text>
+            
+
+        </View>
+    );
 
 }
 

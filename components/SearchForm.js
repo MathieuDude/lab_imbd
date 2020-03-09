@@ -4,17 +4,16 @@ import Header from './Header.js';
 import FilmItem from './FilmItem.js';
 
 const SearchForm = (props) => {
-
     //this is how you use states in functions I guess
     //hooks allow you to use states without writing a class
     
-    const [title, setTitle] = useState('default');
-    const [starring, setStarring] = useState('default');
-    const [director, setDirector] = useState('default');
-    const [genre, setGenre] = useState('default'); //THIS SET IS LEFT
+    const [title, setTitle] = useState();
+    const [starring, setStarring] = useState();
+    const [director, setDirector] = useState();
+    const [genre, setGenre] = useState(); //THIS SET IS LEFT
     const [basedOnNovel, setBasedOnNovel] = useState(false);//THIS SET IS LEFT
-    const [releaseYear, setReleaseYear] = useState('default');
-    const [duration, setDuration] = useState('default');
+    const [releaseYear, setReleaseYear] = useState();
+    const [duration, setDuration] = useState();
 
     return(
         <View style={styles.mainContainer}>
@@ -56,11 +55,34 @@ const SearchForm = (props) => {
                 <View style={styles.flexContainer}>
                     <Text style={{ fontSize: 22, paddingLeft: 10 }}>Genre:</Text>
                     <View>
-                    <Text style = {styles.text}>{genre}</Text>
-                        <Picker selectedValue = {genre} onValueChange = {setGenre}>
-                        <Picker.Item label = "Steve" value = "Steve" />
-                        <Picker.Item label = "Ellen" value = "Ellen" />
-                        <Picker.Item label = "Maria" value = "Maria" />
+                        <Picker style={styles.pickerStyle} selectedValue = {genre} onValueChange = {setGenre}>
+                            <Picker.Item label="None" value="none" />
+                            <Picker.Item label="Adventure" value="Adventure" />
+                            <Picker.Item label="Anticipation" value="Anticipation" />
+                            <Picker.Item label="Bio" value="Bio" />
+                            <Picker.Item label="Black" value="Black" />
+                            <Picker.Item label="Christmas" value="Christmas" />
+                            <Picker.Item label="Comedy" value="Comedy" />
+                            <Picker.Item label="Crime" value="Crime" />
+                            <Picker.Item label="Cyberpunk" value="Cyberpunk" />
+                            <Picker.Item label="Drama" value="Drama" />
+                            <Picker.Item label="Dystopie" value="Dystopie" />
+                            <Picker.Item label="Epic" value="Epic" />
+                            <Picker.Item label="Family" value="Family" />
+                            <Picker.Item label="Fantasy" value="Fantasy" />
+                            <Picker.Item label="Gangster" value="Gangster" />
+                            <Picker.Item label="Heist" value="Heist" />
+                            <Picker.Item label="Horror" value="Horror" />
+                            <Picker.Item label="Live-action" value="Live-action" />
+                            <Picker.Item label="Lovestory" value="Lovestory" />
+                            <Picker.Item label="Mystery" value="Mystery" />
+                            <Picker.Item label="Neo-western" value="Neo-western" />
+                            <Picker.Item label="Prison" value="Prison" />
+                            <Picker.Item label="Psychological" value="Psychological" />
+                            <Picker.Item label="Romatic" value="Romatic" />
+                            <Picker.Item label="Science-fiction" value="Science-fiction" />
+                            <Picker.Item label="Sport" value="Sport" />
+                            <Picker.Item label="War" value="War" />
                         </Picker>
                     </View>
                 </View>
@@ -68,7 +90,9 @@ const SearchForm = (props) => {
                 }
                 <View style={styles.flexContainer}>
                     <Text style={{ fontSize: 22, paddingLeft: 10 }}>Based on a book:</Text>
-                    <CheckBox></CheckBox>
+                    <CheckBox
+                     value={basedOnNovel}
+                     onValueChange={setBasedOnNovel}/>
                 </View>
                 {//RELEASE TEAR
                 }
@@ -107,7 +131,7 @@ const SearchForm = (props) => {
 
 function displayResults(title, starring, director, genre, basedOnNovel, releaseYear, duration)
 {
-    return null; //this will return the applicable flatlist, we are probably only searching on 1 value at a time from my current understanding of the project
+    return null; //this will return the applicable flatlist
 
     
 }
