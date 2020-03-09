@@ -3,11 +3,10 @@ import { StyleSheet, Text, View, TextInput, Picker, CheckBox, Button } from 'rea
 import Header from './Header.js';
 import FilmItem from './FilmItem.js';
 
-//this is how you use states in functions I guess
-    //hooks allow you to use states without writing a class
-    
-
 const SearchForm = (props) => {
+
+    //this is how you use states in functions I guess
+    //hooks allow you to use states without writing a class
     
     const [title, setTitle] = useState('default');
     const [starring, setStarring] = useState('default');
