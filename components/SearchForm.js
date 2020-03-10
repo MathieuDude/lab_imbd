@@ -120,7 +120,7 @@ const SearchForm = (props) => {
                     />
                     <Button
                         title="CONFIRM"
-                        onPress={displayResults(title, starring, director, genre, basedOnNovel, releaseYear, duration)} //Ceci devrai marcher?
+                        //onPress={displayResults} //Ceci devrai marcher?
                         style={styles.button}
                     />
                 </View>
@@ -129,13 +129,7 @@ const SearchForm = (props) => {
     );
 }
 
-function displayResults(title, starring, director, genre, basedOnNovel, releaseYear, duration)
-{
-    return null; //this will return the applicable flatlist
-}
-
 export default SearchForm;
-export default displayResults;
 
 const styles = StyleSheet.create({
     textInput: {
