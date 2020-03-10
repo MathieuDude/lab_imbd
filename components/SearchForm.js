@@ -132,11 +132,10 @@ const SearchForm = (props) => {
 function displayResults(title, starring, director, genre, basedOnNovel, releaseYear, duration)
 {
     return null; //this will return the applicable flatlist
-
-    
 }
 
 export default SearchForm;
+export default displayResults;
 
 const styles = StyleSheet.create({
     textInput: {

@@ -4,7 +4,12 @@ import { StyleSheet, Text, View} from 'react-native';
 const FilmItem = (props) => {
     return(
         <View style={styles.todoItem}>
-            <Text></Text>
+            <Text>
+                {
+                    props.title + " was released in " + props.releaseYear + " created by " + props.director + "\n" + ". It is a " + props.genre + "movie." + "\n" +
+                    "This movie last " + props.duration + " minutes and stars " + props.starring
+                }
+            </Text>
             
 
         </View>
@@ -13,18 +18,10 @@ const FilmItem = (props) => {
 }
 
 const styles = StyleSheet.create({
-    todoItem: {
-        width: '100%',
-        height: 40,
-        borderBottomColor: '#DDD',
-        borderBottomWidth: 1,
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingLeft: 15,
-        paddingTop: 5
-    },
+    text: {
 
+
+    }
 })
 
 export default FilmItem;
