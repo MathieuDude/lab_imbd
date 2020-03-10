@@ -18,37 +18,3 @@ export default function App() {
     );
 
 }
-
-const styles = StyleSheet.create({
-    container: {
-        paddingTop: 23,
-    },
-    flexContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingTop: 10,
-        alignItems: 'center',
-    },
-    button: {
-        width: '45%',
-        paddingRight: 400,
-        backgroundColor: "#f5e942",
-        margin: 10,
-    },
-    inputBar: {
-        backgroundColor: '#DFDFDF',
-        fontSize: 18,
-        height: 45,
-        padding: 10,
-        marginVertical: 5,
-    },
-    mainContainer: {
-        
-        
-    },
-    content: {
-        padding:10,
-
-    },
-
-});

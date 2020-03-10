@@ -120,7 +120,7 @@ const SearchForm = (props) => {
                     />
                     <Button
                         title="CONFIRM"
-                        //onPress={displayResults} //Ceci devrai marcher?
+                        //onPress={displayResults}
                         style={styles.button}
                     />
                 </View>
@@ -151,17 +151,6 @@ const styles = StyleSheet.create({
         borderColor: 'black',
         borderWidth: 2
     },
-    label: {
-        fontSize: 16,
-        fontWeight: '500',
-    },
-    buttonContainer: {
-        paddingTop: 10,
-        flexDirection: 'row',
-        width: '100%',
-        justifyContent: 'space-between',
-        paddingHorizontal: 15
-    },
     button: {
         width: '45%',
         paddingRight: 400,
@@ -179,5 +168,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
         alignSelf: 'center',
         color: 'black'
-     },
+    }
 });
